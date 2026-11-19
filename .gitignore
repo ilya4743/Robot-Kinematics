@@ -1,0 +1,17 @@
+# CMake build directories and generated files
+/build/
+/build-*/
+/cmake-build-*/
+/CMakeCache.txt
+/CMakeFiles/
+/cmake_install.cmake
+/CTestTestfile.cmake
+/Testing/
+/compile_commands.json
+/CMakeUserPresets.json
+
+# Local Qt Creator and QML Language Server settings
+/.qtcreator/
+*.user
+*.user.*
+.qmlls.ini
