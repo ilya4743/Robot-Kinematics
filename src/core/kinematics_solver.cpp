@@ -29,8 +29,7 @@ QVector<QMatrix4x4> KinematicsSolver::forwardFrames(const RobotModel& model,
     frames.append(frame);
     for (qsizetype i = 0; i < model.joints.size(); ++i) {
         const auto& joint = model.joints[i];
-        const double theta = i < theta_rad.size() ? theta_rad[i]
-                                                 : qDegreesToRadians(joint.theta0_deg);
+        const double theta = i < theta_rad.size() ? theta_rad[i] : qDegreesToRadians(joint.theta0_deg);
         frame = frame * dh_transform(theta, joint.d, joint.a, joint.alpha);
         frames.append(frame);
     }
